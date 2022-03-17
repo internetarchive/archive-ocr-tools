@@ -1,0 +1,2 @@
+- Move tesseract invocations here
+- Move language detection and script detection helper code here
