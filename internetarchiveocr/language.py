@@ -100,6 +100,8 @@ SPECIAL_CASE_MAP = {
     'mac': 'mkd',       # Macedonian
     'may': 'msa',       # Malay
     'mao': 'mri',       # Maori
+    'ang': 'enm',       # Old English; Middle English is closest option
+    'old english': 'enm',        # Middle English (closest)
     'middle english': 'enm',     # Middle English
     'fro': 'fra',       # Old French; French is closest option
     'goh': 'deu',       # Old High German; German is closest option
