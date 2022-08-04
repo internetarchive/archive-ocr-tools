@@ -27,6 +27,8 @@ TESSERACT_SCRIPT_CODES = {
     'Tamil', 'Telugu', 'Thaana', 'Thai', 'Tibetan', 'Vietnamese',
 }
 
+TESSERACT_SCRIPT_CODES_L = set([x.lower() for x in TESSERACT_SCRIPT_CODES])
+
 # Mapping of lower-case language names to ISO639-3 codes.
 LANGNAME_ALPHA3_MAP = {k.lower(): v.part3.lower() for k,v in languages.name.items()}
 for lang in languages.languages:
@@ -380,8 +382,8 @@ def language_to_alpha3lang(lang):
 def get_tesseract_language_code(lang):
     lang = lang.lower()
 
-    if lang in TESSERACT_SCRIPT_CODES:
-        return lang
+    if lang in TESSERACT_SCRIPT_CODES_L:
+        return lang.capitalize()
 
     if lang in TESSERACT_LANGUAGE_CODES:
         # Check the raw language value against tesseract codes
