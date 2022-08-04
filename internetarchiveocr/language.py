@@ -15,8 +15,17 @@ TESSERACT_LANGUAGE_CODES = {
     'oci', 'ori', 'pan', 'pol', 'por', 'pus', 'que', 'ron', 'rus', 'san',
     'sin', 'slk', 'slv', 'snd', 'spa', 'spa_old', 'sqi', 'srp', 'srp_latn',
     'sun', 'swa', 'swe', 'syr', 'tam', 'tat', 'tel', 'tgk', 'tha', 'tir', 'ton',
-    'tur', 'uig', 'ukr', 'urd', 'uzb', 'uzb_cyrl', 'vie', 'yid', 'yor'
+    'tur', 'uig', 'ukr', 'urd', 'uzb', 'uzb_cyrl', 'vie', 'yid', 'yor',
     }
+
+TESSERACT_SCRIPT_CODES = {
+    'Arabic', 'Armenian', 'Bengali', 'Canadian_Aboriginal', 'Cherokee',
+    'Cyrillic', 'Devanagari', 'Ethiopic', 'Fraktur', 'Georgian', 'Greek',
+    'Gujarati', 'Gurmukhi', 'HanS', 'HanS_vert', 'HanT', 'HanT_vert', 'Hangul',
+    'Hangul_vert', 'Hebrew', 'Japanese', 'Japanese_vert', 'Kannada', 'Khmer',
+    'Lao', 'Latin', 'Malayalam', 'Myanmar', 'Oriya', 'Sinhala', 'Syriac',
+    'Tamil', 'Telugu', 'Thaana', 'Thai', 'Tibetan', 'Vietnamese',
+}
 
 # Mapping of lower-case language names to ISO639-3 codes.
 LANGNAME_ALPHA3_MAP = {k.lower(): v.part3.lower() for k,v in languages.name.items()}
@@ -158,7 +167,7 @@ LANGCODE_SCRIPT_MAP = {
     'dzo': 'Tibetan',               # Dzongkha: Tibetan
     'ell': 'Greek',                 # Greek (modern): Greek
     'eng': ('Latin', 'Fraktur'),    # English: Latin + Fraktur
-    'enm': 'Latin',                 # Middle English: Latin
+    'enm': ('Latin', 'Fraktur'),    # Middle English: Latin
     'epo': 'Latin',                 # Esperanto: Latin
     #'equ': None,                    # Math equation: TODO how to handle this case?
     'est': ('Latin', 'Fraktur'),    # Estonian: Latin + Fraktur
@@ -370,6 +379,9 @@ def language_to_alpha3lang(lang):
 
 def get_tesseract_language_code(lang):
     lang = lang.lower()
+
+    if lang in TESSERACT_SCRIPT_CODES:
+        return lang
 
     if lang in TESSERACT_LANGUAGE_CODES:
         # Check the raw language value against tesseract codes
