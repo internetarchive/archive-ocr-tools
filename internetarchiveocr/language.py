@@ -138,6 +138,7 @@ SPECIAL_CASE_MAP = {
     'ira': 'fas',       # Persian
     'syc': 'syr',       # Classical Syriac; use Syriac
     'en_us': 'eng',     # Some partners use en_US for English
+    'arm': 'hye',       # Alternative for hye (Armenian)
 }
 
 # Map of Tesseract language codes to Tesseract script values.
