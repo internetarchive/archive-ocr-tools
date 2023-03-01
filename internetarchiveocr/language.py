@@ -5,17 +5,18 @@ AUTOUSE_DETECTED_SCRIPTS = ('Fraktur', 'Kannada', 'Telugu', 'Tamil')
 # XXX: osd and equ are removed
 TESSERACT_LANGUAGE_CODES = {
     'afr', 'amh', 'ara', 'asm', 'aze', 'aze_cyrl', 'bel', 'ben', 'bod', 'bos',
-    'bre', 'bul', 'cat', 'ceb', 'ces', 'chi_sim', 'chi_tra', 'chr', 'cos',
-    'cym', 'dan', 'deu', 'div', 'dzo', 'ell', 'eng', 'enm', 'epo', 'est',
-    'eus', 'fas', 'fao', 'fil', 'fin', 'fra', 'frk', 'frm', 'fry', 'gla', 'gle',
-    'glg', 'grc', 'guj', 'hat', 'heb', 'hin', 'hrv', 'hun', 'hye', 'iku', 'ind',
-    'isl', 'ita', 'ita_old', 'jav', 'jpn', 'kan', 'kat', 'kat_old', 'kaz',
-    'khm', 'kir', 'kmr', 'kor', 'kor_vert', 'lao', 'lat', 'lav', 'lit', 'ltz',
-    'mal', 'mar', 'mkd', 'mlt', 'mon', 'mri', 'msa', 'mya', 'nep', 'nld', 'nor',
-    'oci', 'ori', 'pan', 'pol', 'por', 'pus', 'que', 'ron', 'rus', 'san',
-    'sin', 'slk', 'slv', 'snd', 'spa', 'spa_old', 'sqi', 'srp', 'srp_latn',
-    'sun', 'swa', 'swe', 'syr', 'tam', 'tat', 'tel', 'tgk', 'tha', 'tir', 'ton',
-    'tur', 'uig', 'ukr', 'urd', 'uzb', 'uzb_cyrl', 'vie', 'yid', 'yor',
+    'bre', 'bul', 'cat', 'ceb', 'ces', 'chi_sim', 'chi_sim_vert', 'chi_tra',
+    'chi_tra_vert', 'chr', 'cos', 'cym', 'dan', 'deu', 'div', 'dzo', 'ell',
+    'eng', 'enm', 'epo', 'est', 'eus', 'fas', 'fao', 'fil', 'fin', 'fra',
+    'frk', 'frm', 'fry', 'gla', 'gle', 'glg', 'grc', 'guj', 'hat', 'heb',
+    'hin', 'hrv', 'hun', 'hye', 'iku', 'ind', 'isl', 'ita', 'ita_old', 'jav',
+    'jpn', 'kan', 'kat', 'kat_old', 'kaz', 'khm', 'kir', 'kmr', 'kor',
+    'kor_vert', 'lao', 'lat', 'lav', 'lit', 'ltz', 'mal', 'mar', 'mkd', 'mlt',
+    'mon', 'mri', 'msa', 'mya', 'nep', 'nld', 'nor', 'oci', 'ori', 'pan',
+    'pol', 'por', 'pus', 'que', 'ron', 'rus', 'san', 'sin', 'slk', 'slv',
+    'snd', 'spa', 'spa_old', 'sqi', 'srp', 'srp_latn', 'sun', 'swa', 'swe',
+    'syr', 'tam', 'tat', 'tel', 'tgk', 'tha', 'tir', 'ton', 'tur', 'uig',
+    'ukr', 'urd', 'uzb', 'uzb_cyrl', 'vie', 'yid', 'yor',
     }
 
 TESSERACT_SCRIPT_CODES = {
@@ -159,8 +160,10 @@ LANGCODE_SCRIPT_MAP = {
     'cat': 'Latin',                 # Catalan: Latin
     'ceb': 'Latin',                 # Cebuano: Latin
     'ces': 'Latin',                 # Czech: Latin
-    'chi_sim': 'HanS',              # Chinese (simplified): Han TODO: Also HanS_vert?
-    'chi_tra': 'HanT',              # Chinese (traditional): Han TODO: Also HanT_vert?
+    'chi_sim': 'HanS',              # Chinese (simplified): HanS
+    'chi_sim_vert': 'HanS_vert',    # Chinese (simplified, vertical): HanS_vert
+    'chi_tra': 'HanT',              # Chinese (traditional): HanT
+    'chi_tra_vert': 'HanT_vert',    # Chinese (traditional, vertical): HanT_vert
     'chr': ('Cherokee', 'Latin'),   # Cherokee: Cherokee, Latin
     'cos': 'Latin',                 # Corsican: Latin
     'cym': 'Latin',                 # Welsh: Latin
